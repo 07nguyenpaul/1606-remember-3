@@ -1,11 +1,8 @@
-<div class="template">
-  <h2>REMINDERS</h2>
-
-  <ul>
+<section>
   {{#each model as |reminder|}}
-    <li class="spec-reminder-item">{{reminder.title}}</li>
+    <article class="spec-reminder-item">
+        {{reminder.title}}
+    </article>
   {{/each}}
-  </ul>
-
-</div>
+</section>
 {{outlet}}
