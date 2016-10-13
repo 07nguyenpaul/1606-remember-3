@@ -10,4 +10,10 @@
     </article>
   {{/each}}
 </section>
+<button>
+  {{#link-to 'reminders.new-reminder' class="new-reminder"}}
+    Create new Reminder
+  {{/link-to}}
+</button>
+
 {{outlet}}

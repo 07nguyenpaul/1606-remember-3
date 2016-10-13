@@ -1,6 +1,6 @@
 /* globals server */
 
-import { test, skip } from 'qunit';
+import { test } from 'qunit';
 import moduleForAcceptance from 'remember/tests/helpers/module-for-acceptance';
 
 import Ember from 'ember';
@@ -33,4 +33,18 @@ test('clicking on an individual item', function(assert) {
     assert.equal(currentURL(), '/1');
     assert.equal(Ember.$('.spec-reminder-item:first').text().trim(), Ember.$('.spec-reminder-title').text().trim());
   });
+
+// test('viewing new reminders', function(assert) {
+//
+//   visit('/');
+//   click('.new-reminder');
+//   fillIn('.spec-input-title', 'Hello');
+//
+//   andThen(function() {
+//     assert.equal(currentURL(), '/new');
+//     assert.equal(find('.spec-input-title').val(), 'Hello');
+//   });
+//  });
+//   // click('.new-reminder-submit');
+//
 });
