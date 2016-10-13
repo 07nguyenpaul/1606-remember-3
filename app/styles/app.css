@@ -1,0 +1,20 @@
+.spec-reminder-item {
+  text-decoration: none;
+}
+
+.reminder-title:hover {
+  font-size: 1.5em;
+}
+
+.active {
+  background-color: #40dde2;
+}
+
+p.spec-reminder-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.single-reminder-container {
+  background-color: #fcefce;
+}
