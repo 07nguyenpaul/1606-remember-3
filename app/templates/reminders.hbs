@@ -1,7 +1,8 @@
 <section>
   {{#each model as |reminder|}}
     <article class="spec-reminder-item">
-        {{reminder.title}}
+        {{#link-to 'reminders.reminder' reminder}}{{reminder.title}}{{/link-to}}<br>
+        {{reminder.date}}
     </article>
   {{/each}}
 </section>
