@@ -24,7 +24,7 @@ test('viewing the homepage', function(assert) {
   });
 });
 
-skip('clicking on an individual item', function(assert) {
+test('clicking on an individual item', function(assert) {
 
   visit('/');
   click('.spec-reminder-item:first');
