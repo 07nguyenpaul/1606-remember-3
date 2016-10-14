@@ -40,13 +40,13 @@ test('clicking on Add Reminder and creating a new reminder which renders to the 
   visit('/');
   click('.add-reminder-button');
   fillIn('.spec-input-title', 'hello');
-  fillIn('.spec-input-date', "2016-10-20");
+  fillIn('.spec-input-date', "2016-10-31");
   fillIn('.spec-input-notes', 'Boo, Happy Halloween!');
 
   andThen(function() {
     assert.equal(currentURL(), '/new');
     assert.equal(find('.spec-input-title').val(), "hello");
-    assert.equal(find('.spec-input-date').val(), "2016-10-20");
+    assert.equal(find('.spec-input-date').val(), "2016-10-31");
     assert.equal(find('.spec-input-notes').val(), "Boo, Happy Halloween!");
   });
 
@@ -54,6 +54,6 @@ test('clicking on Add Reminder and creating a new reminder which renders to the 
 
   andThen(function() {
     assert.equal(Ember.$('.spec-reminder-item:last').text().trim(), 'hello');
-    assert.equal(Ember.$('.reminder-date:last').text().trim(), 'Wed Oct 19 2016 18:00:00 GMT-0600 (MDT)');
+    assert.equal(Ember.$('.reminder-date:last').text().trim(), 'Sun Oct 30 2016 18:00:00 GMT-0600 (MDT)');
   });
 });
