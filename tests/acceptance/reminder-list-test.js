@@ -35,7 +35,7 @@ test('clicking on an individual item', function(assert) {
   });
 });
 
-test('clicking on new and creating a new item', function(assert) {
+test('clicking on Add Reminder and creating a new reminder which renders to the page', function(assert) {
 
   visit('/');
   click('.add-reminder-button');
