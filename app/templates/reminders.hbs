@@ -6,12 +6,12 @@
             {{reminder.title}}
           {{/link-to}}
         </h1>
-        <p>{{reminder.date}}</p>
+        <p class="reminder-date">{{reminder.date}}</p>
     </article>
   {{/each}}
 </section>
 <button>
-  {{#link-to 'reminders.new-reminder' class="new-reminder"}}
+  {{#link-to 'reminders.new-reminder' class="add-reminder-button"}}
     Create new Reminder
   {{/link-to}}
 </button>

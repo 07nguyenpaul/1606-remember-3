@@ -33,18 +33,27 @@ test('clicking on an individual item', function(assert) {
     assert.equal(currentURL(), '/1');
     assert.equal(Ember.$('.spec-reminder-item:first').text().trim(), Ember.$('.spec-reminder-title').text().trim());
   });
+});
 
-// test('viewing new reminders', function(assert) {
-//
-//   visit('/');
-//   click('.new-reminder');
-//   fillIn('.spec-input-title', 'Hello');
-//
-//   andThen(function() {
-//     assert.equal(currentURL(), '/new');
-//     assert.equal(find('.spec-input-title').val(), 'Hello');
-//   });
-//  });
-//   // click('.new-reminder-submit');
-//
+test('clicking on new and creating a new item', function(assert) {
+
+  visit('/');
+  click('.add-reminder-button');
+  fillIn('.spec-input-title', 'hello');
+  fillIn('.spec-input-date', "2016-10-20");
+  fillIn('.spec-input-notes', 'Boo, Happy Halloween!');
+
+  andThen(function() {
+    assert.equal(currentURL(), '/new');
+    assert.equal(find('.spec-input-title').val(), "hello");
+    assert.equal(find('.spec-input-date').val(), "2016-10-20");
+    assert.equal(find('.spec-input-notes').val(), "Boo, Happy Halloween!");
+  });
+
+  click('.new-reminder-submit');
+
+  andThen(function() {
+    assert.equal(Ember.$('.spec-reminder-item:last').text().trim(), 'hello');
+    assert.equal(Ember.$('.reminder-date:last').text().trim(), 'Wed Oct 19 2016 18:00:00 GMT-0600 (MDT)');
+  });
 });
