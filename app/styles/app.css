@@ -6,7 +6,7 @@
 
 /*FORM*/
 form {
-  width: 40%;
+  width: 60%;
 }
 
 /*ALL REMINDERS ON THE LEFT*/
@@ -25,6 +25,15 @@ form {
 
 .active {
   background-color: #40dde2;
+}
+
+/* ADDING NEW REMINDER */
+.spec-input-title,
+.spec-input-date,
+.spec-input-notes {
+  width: 40%;
+  height: 20px;
+  font-size: .9em;
 }
 
 /*SINGLE REMINDER ON THE RIGHT*/
