@@ -1,8 +1,12 @@
 <section>
     <article class="single-reminder-container">
-      <p class="spec-reminder-title">{{model.title}}</p>
-      <p>{{model.date}}</p>
-      <p>{{model.notes}}</p>
+      <p contenteditable=true
+        class="spec-reminder-title">
+        {{model.title}}
+      </p>
+      <p contenteditable=true>{{model.date}}</p>
+      <p contenteditable=true>{{model.notes}}</p>
+      <button>edit</button><button>save</button>
     </article>
 </section>
 
