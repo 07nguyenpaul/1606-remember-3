@@ -1,8 +1,36 @@
 <section>
     <article class="single-reminder-container">
-      <p class="spec-reminder-title">{{model.title}}</p>
-      <p>{{model.date}}</p>
-      <p>{{model.notes}}</p>
+      <p class="spec-reminder-title">
+        {{#if isEditing}}
+          Title: {{input class="edit-title" value=model.title}}
+        {{else}}
+          <p class="displayed-reminder-title">{{model.title}}</p>
+        {{/if}}
+      </p>
+      <p class="spec-reminder-date">
+        {{#if isEditing}}
+          Date: {{input class="edit-date" value=model.date}}
+        {{else}}
+          <p>{{model.date}}</p>
+        {{/if}}
+      </p>
+      <p class="spec-reminder-notes">
+        {{#if isEditing}}
+          Notes: {{textarea class="edit-notes" value=model.notes}}
+          <button
+          class="save-button"
+          {{action 'saveChanges' on="click"}}>
+          save
+        </button>
+        {{else}}
+          <p class="individual-note">{{model.notes}}</p>
+          <button
+          class="edit-button"
+          {{action 'editReminder' on="click"}}>
+          edit
+        </button>
+        {{/if}}
+      </p>
     </article>
 </section>
 

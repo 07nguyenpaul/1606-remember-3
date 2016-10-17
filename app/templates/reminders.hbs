@@ -2,7 +2,7 @@
   {{#each model as |reminder|}}
     <article>
         <h1 class="reminder-title">
-          {{#link-to 'reminders.reminder' reminder.id class="spec-reminder-item"}}
+          {{#link-to 'reminders.reminder' reminder.id class="spec-reminder-item title-link"}}
             {{reminder.title}}
           {{/link-to}}
         </h1>
