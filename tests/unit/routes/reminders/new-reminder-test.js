@@ -1,6 +1,6 @@
 import { moduleFor, skip } from 'ember-qunit';
 
-moduleFor('route:reminders/new-reminder', 'Unit | Route | reminders/new reminder', {
+moduleFor('route:reminders/new', 'Unit | Route | reminders/new reminder', {
   // Specify the other units that are required for this test.
   // needs: ['controller:foo']
 });
