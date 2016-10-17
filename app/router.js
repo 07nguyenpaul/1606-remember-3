@@ -9,8 +9,8 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('reminders', {path: '/'}, function() {
     this.route('reminder', {path: '/:id'});
+    this.route('new');
   });
 });
-
 
 export default Router;
