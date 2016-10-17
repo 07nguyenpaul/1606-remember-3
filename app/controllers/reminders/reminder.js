@@ -4,6 +4,7 @@ export default Ember.Controller.extend({
   store: Ember.inject.service(),
 
   isEditable: false,
+  isDirty: false,
 
   actions: {
     editReminder() {
@@ -13,7 +14,7 @@ export default Ember.Controller.extend({
       this.set('isEditing', false);
     },
     revertChanges() {
-      this.get('model').rollbackAttributes()
+      this.get('model').rollbackAttributes();
     }
   }
 });

@@ -24,7 +24,7 @@
         </button>
         <button
         class="revert-button"
-        {{action 'revertChanges' on="click"}}>
+        {{action 'revertChanges' on="click"}} hidden={{ unless model.hasDirtyAttributes 'true'}}>
         revert
       </button>
         {{else}}
