@@ -17,22 +17,20 @@
       <p class="spec-reminder-notes">
         {{#if isEditing}}
           Notes: {{textarea class="edit-notes" value=model.notes}}
+          <button
+          class="save-button"
+          {{action 'saveChanges' on="click"}}>
+          save
+        </button>
         {{else}}
           <p class="individual-note">{{model.notes}}</p>
-        {{/if}}
-      </p>
-      <section class="button-container">
-        <button
+          <button
           class="edit-button"
           {{action 'editReminder' on="click"}}>
           edit
         </button>
-        <button
-          class="save-button"
-          {{action 'saveEdits' on="click"}}>
-          save
-        </button>
-    </section>
+        {{/if}}
+      </p>
     </article>
 </section>
 

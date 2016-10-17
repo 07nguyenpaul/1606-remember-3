@@ -68,11 +68,8 @@ form {
 .edit-notes {
   height: 15vh;
 }
+
 /*BUTTONS*/
-.button-container {
-  display: flex;
-  flex-direction: row;
-}
 .edit-button,
 .save-button {
   width: 45px;

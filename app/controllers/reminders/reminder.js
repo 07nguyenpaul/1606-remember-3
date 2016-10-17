@@ -9,7 +9,7 @@ export default Ember.Controller.extend({
     editReminder() {
       this.set('isEditing', true);
     },
-    saveEdits() {
+    saveChanges() {
       this.set('isEditing', false);
     }
   }
