@@ -1,4 +1,4 @@
-<section>
+<section class='reminders-container'>
   {{#each model as |reminder|}}
     <article>
         <h1 class="reminder-title">
@@ -9,11 +9,11 @@
         <p class="reminder-date">{{reminder.date}}</p>
     </article>
   {{/each}}
-</section>
-<button>
-  {{#link-to 'reminders.new' class="add-reminder-button"}}
+  <button>
+    {{#link-to 'reminders.new' class="add-reminder-button"}}
     Add Reminder
-  {{/link-to}}
-</button>
+    {{/link-to}}
+  </button>
+</section>
 
 {{outlet}}
