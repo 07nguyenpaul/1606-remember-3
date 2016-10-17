@@ -1,9 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  tagName: 'section',
-  classNames: ['new-reminder'],
-
   title: '',
   date: '',
   notes: '',
