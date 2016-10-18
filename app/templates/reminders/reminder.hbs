@@ -22,6 +22,11 @@
           {{action 'saveChanges' on="click"}}>
           save
         </button>
+        <button
+        class="revert-button"
+        {{action 'revertChanges' on="click"}} hidden={{ unless model.hasDirtyAttributes 'true'}}>
+        revert
+      </button>
         {{else}}
           <p class="individual-note">{{model.notes}}</p>
           <button

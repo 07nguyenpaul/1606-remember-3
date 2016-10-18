@@ -57,3 +57,34 @@ test('clicking on Add Reminder and creating a new reminder which renders to the 
     assert.equal(Ember.$('.reminder-date:last').text().trim(), 'Sun Oct 30 2016 18:00:00 GMT-0600 (MDT)');
   });
 });
+
+  test('clicking on revert returns the reminder to the original state', function(assert) {
+    visit('/');
+    click('.add-reminder-button');
+    fillIn('.spec-input-title', 'hello');
+    fillIn('.spec-input-date', "2016-10-31");
+    fillIn('.spec-input-notes', 'Boo, Happy Halloween!');
+    click('.new-reminder-submit');
+    click('.spec-reminder-item:last');
+    click('.edit-button');
+
+
+    andThen(function() {
+      assert.equal(currentURL(), '/6');
+      assert.equal(find('.edit-title').val(), 'hello');
+    });
+
+    fillIn('.edit-title', 'hello123');
+
+    andThen(function() {
+      assert.equal(currentURL(), '/6');
+      assert.equal(find('.edit-title').val(), 'hello123');
+    });
+
+    click('.revert-button');
+
+    andThen(function() {
+      assert.equal(currentURL(), '/6');
+      assert.equal(find('.edit-title').val(), 'hello');
+    });
+});
