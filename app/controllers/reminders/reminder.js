@@ -10,7 +10,9 @@ export default Ember.Controller.extend({
       this.set('isEditing', true);
     },
     saveChanges() {
-      this.set('isEditing', false);
+      this.get('model').save().then( () => {
+        this.set('isEditing', false);
+      })
     },
     revertChanges() {
       this.get('model').rollbackAttributes();
