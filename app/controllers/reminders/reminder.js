@@ -3,15 +3,15 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   store: Ember.inject.service(),
 
-  isEditable: false,
+  isEditing: false,
 
   actions: {
     editReminder() {
-      this.set('isEditing', true);
+      this.toggleProperty('isEditing');
     },
     saveChanges() {
       this.get('model').save().then( () => {
-        this.set('isEditing', false);
+        this.toggleProperty('isEditing');
       })
     },
     revertChanges() {

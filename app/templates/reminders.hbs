@@ -1,17 +1,17 @@
 <section class='reminders-container'>
   {{#each model as |reminder|}}
-    <article>
-        <h1 class="reminder-title">
-          {{#link-to 'reminders.reminder' reminder.id class="spec-reminder-item title-link"}}
-            {{reminder.title}}
-          {{/link-to}}
-        </h1>
-        <p class="reminder-date">{{reminder.date}}</p>
-        <h3 class="unsaved-changes"
-            hidden={{ unless reminder.hasDirtyAttributes 'true'}}>
-            This reminder has unsaved changes
-        </h3>
-    </article>
+  <article>
+    <h1 class="reminder-title">
+      {{#link-to 'reminders.reminder' reminder.id class="spec-reminder-item title-link"}}
+        {{reminder.title}}
+      {{/link-to}}
+    </h1>
+    <p class="reminder-date">{{reminder.date}}</p>
+    <h3 class="unsaved-changes"
+        hidden={{unless reminder.hasDirtyAttributes 'true'}}>
+        This reminder has unsaved changes
+    </h3>
+  </article>
   {{/each}}
   <button>
     {{#link-to 'reminders.new' class="add-reminder-button"}}
