@@ -4,7 +4,6 @@ export default Ember.Controller.extend({
   store: Ember.inject.service(),
 
   isEditable: false,
-  isDirty: false,
 
   actions: {
     editReminder() {
