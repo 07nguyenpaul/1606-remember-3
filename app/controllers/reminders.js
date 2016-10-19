@@ -22,7 +22,7 @@ export default Ember.Controller.extend({
   }),
 
   actions: {
-    remove(reminder) {
+    deleteReminder(reminder) {
       reminder.destroyRecord();
     },
     updateSearch(search) {

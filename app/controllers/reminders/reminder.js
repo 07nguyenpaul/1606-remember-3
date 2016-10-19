@@ -17,8 +17,8 @@ export default Ember.Controller.extend({
     revertChanges() {
       this.get('model').rollbackAttributes();
     },
-    deleteReminder() {
-      this.get('model').destroyRecord().then( () => {
+    deleteReminder(model) {
+      model.destroyRecord().then( () => {
         this.transitionToRoute('reminders');
       });
     }
