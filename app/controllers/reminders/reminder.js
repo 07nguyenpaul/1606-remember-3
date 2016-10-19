@@ -12,7 +12,7 @@ export default Ember.Controller.extend({
     saveChanges() {
       this.get('model').save().then( () => {
         this.toggleProperty('isEditing');
-      })
+      });
     },
     revertChanges() {
       this.get('model').rollbackAttributes();

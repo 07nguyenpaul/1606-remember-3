@@ -1,5 +1,6 @@
 <section class='reminders-container'>
-  {{#each model as |reminder|}}
+  {{search-bar value=search searchUpdated=(action "updateSearch")}}
+  {{#each reminders as |reminder|}}
   <article>
     <h1 class="reminder-title">
       {{#link-to 'reminders.reminder' reminder.id class="spec-reminder-item title-link"}}
