@@ -19,10 +19,8 @@ export default Ember.Controller.extend({
     },
     deleteReminder() {
       this.get('model').destroyRecord().then( () => {
-        this.get('model').save().then( () => {
-          this.transitionToRoute('reminders')
-        });
-      })
+        this.transitionToRoute('reminders');
+      });
     }
   }
 });
