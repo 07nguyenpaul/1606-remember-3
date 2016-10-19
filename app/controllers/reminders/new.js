@@ -15,5 +15,3 @@ export default Ember.Controller.extend({
     }
   }
 });
-
-// this.setProperties({title: '', date: '', notes: ''});

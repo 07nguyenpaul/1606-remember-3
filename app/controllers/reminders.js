@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   queryParams: ['search'],
 
-  search: null,
+  search: '',
 
   reminders: Ember.computed('search', function() {
     const search = this.get('search');
@@ -12,9 +12,7 @@ export default Ember.Controller.extend({
 
     if(search) {
       reminders = reminders.filter(reminder => {
-        return reminder.get('title')
-                       .toLowerCase()
-                       .match(search);
+        return reminder.get('title').toLowerCase().match(search);
       });
     }
 
