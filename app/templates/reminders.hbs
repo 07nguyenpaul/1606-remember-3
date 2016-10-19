@@ -11,6 +11,11 @@
         hidden={{unless reminder.hasDirtyAttributes 'true'}}>
         This reminder has unsaved changes
     </h3>
+    <button
+    class="delete-reminder"
+    {{action 'deleteReminder' reminder}}>
+    delete
+  </button>
   </article>
   {{/each}}
   <button>
